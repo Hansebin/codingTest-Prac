@@ -5,11 +5,21 @@
 // 6명 -> 1판 / 10명 -> 5판 / 4명 -> 2판
 
 function solution(num) {
-    let result = 0
+    let piece = 6
 
-    // 다시 풀기!!
 
-    return result
+    // while true -> 무한루프를 사용할 때는 break가 필수! => 무한 루프에서 나올 수 있게
+    while (true) {
+
+        if (piece % num === 0){
+            break
+        }
+        piece += 6
+        // 6의 배수 -> 1판이 6조각이기 때문에
+    }
+    // 이번 반복문에서는 범위에 따로 지정이 되지 않기 때문에 while문 사용해서 무한루프로 돌리고 조건을 만족하면 break로 나올 수 있게 하기!
+
+    return piece / 6
 }
 
-console.log(solution(10))
+console.log(solution(32))
