@@ -7,19 +7,35 @@
 function solution(num) {
     let piece = 6
 
-
     // while true -> 무한루프를 사용할 때는 break가 필수! => 무한 루프에서 나올 수 있게
-    while (true) {
+    // 6의 배수 -> 1판이 6조각이기 때문에
+    // 이번 반복문에서는 범위에 따로 지정이 되지 않기 때문에 while문 사용해서 무한루프로 돌리고 조건을 만족하면 break로 나올 수 있게 하기!
 
+    while (true) {
         if (piece % num === 0){
             break
         }
         piece += 6
-        // 6의 배수 -> 1판이 6조각이기 때문에
     }
-    // 이번 반복문에서는 범위에 따로 지정이 되지 않기 때문에 while문 사용해서 무한루프로 돌리고 조건을 만족하면 break로 나올 수 있게 하기!
 
-    return piece / 6
+    return piece / num
 }
 
 console.log(solution(32))
+
+
+
+// 화살표 함수 사용
+// const pizza = (n) => {
+//     let piece = 6
+
+//     while (true) {
+//         if (piece % n === 0){
+//             break
+//         }
+//     }
+//     piece += 6
+
+//     return piece / n
+// }
+
